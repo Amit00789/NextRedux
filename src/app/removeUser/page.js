@@ -1,17 +1,17 @@
-"use client";
+"use client"
 import { useSelector, useDispatch } from "react-redux";
 import { deleteUser } from "../redux/slice";
-export default function DisplayUsers() {
-  const userData = useSelector((data) => data.userData.users);
-  const dispatch = useDispatch();
-
-  const UserDispatch = () => {
-    dispatch(deleteUser(userData));
-  };
-  return (
-    <div className="display-user">
+export default function removeUser() {
+    const userData = useSelector((data) => data.userData.users);
+    const dispatch = useDispatch();
+  
+    const UserDispatch = () => {
+      dispatch(deleteUser(userData));
+    };
+    return(
+        <div className="display-user">
       <h3>User List</h3>
-      {userData?.map((item) => (
+      {userData.map((item) => (
         
           <div key={item.id} className="user-item">
             <span>{item.name}</span>
@@ -19,5 +19,5 @@ export default function DisplayUsers() {
           </div>
       ))}
     </div>
-  );
+    )
 }

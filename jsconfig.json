@@ -1,5 +1,9 @@
 {
   "compilerOptions": {
+    "module": "ESNext",
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules"],
     "paths": {
       "@/*": ["./src/*"]
     }

@@ -1,5 +1,10 @@
+// @ts-ignore
 const { configureStore } = require("@reduxjs/toolkit");
- import reducer from './slice'
+ import userReducer from './slice'
+ import todoReducer from './todoSlice'
 export const store=configureStore({
-    reducer
+    reducer: {
+        userData: userReducer,
+        todoData: todoReducer
+    }
 })
